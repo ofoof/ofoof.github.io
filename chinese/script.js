@@ -10,11 +10,11 @@
       correctAnswer: "b"
     },
     {
-      question: "What is the best site ever created?",
+      question: "怎么说人?",
       answers: {
-        a: "SitePoint",
-        b: "Simple Steps Code",
-        c: "Trick question; they're both the best"
+        a: "book",
+        b: "dog",
+        c: "person"
       },
       correctAnswer: "c"
     },

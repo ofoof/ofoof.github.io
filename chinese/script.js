@@ -26,6 +26,15 @@
         c: "大"
       },
       correctAnswer: "a"
+    },
+  {
+      question: "地面的拼写是什么",
+      answers: {
+        a: "grond",
+        b: "ground",
+        c: "graund"
+      },
+      correctAnswer: "b"
     }
   ];
 

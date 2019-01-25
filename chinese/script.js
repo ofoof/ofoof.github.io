@@ -1,13 +1,13 @@
 (function() {
   const myQuestions = [
     {
-      question: "noogie?",
+      question: "what is the pinyin for 我喜欢?",
       answers: {
         a: "ni hao",
         b: "wo xi huan",
-        c: "Waluigi, obviously"
+        c: "bu ai hua"
       },
-      correctAnswer: "c"
+      correctAnswer: "b"
     },
     {
       question: "What is the best site ever created?",

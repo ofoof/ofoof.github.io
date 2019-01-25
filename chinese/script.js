@@ -3,8 +3,8 @@
     {
       question: "noogie?",
       answers: {
-        a: "Superman",
-        b: "The Terminator",
+        a: "ni hao",
+        b: "wo xi huan",
         c: "Waluigi, obviously"
       },
       correctAnswer: "c"

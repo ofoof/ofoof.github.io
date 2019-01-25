@@ -19,14 +19,13 @@
       correctAnswer: "c"
     },
     {
-      question: "Where is Waldo really?",
+      question: "?",
       answers: {
-        a: "Antarctica",
-        b: "Exploring the Pacific Ocean",
-        c: "Sitting in a tree",
-        d: "Minding his own business, so stop asking"
+        a: "",
+        b: "",
+        c: ""
       },
-      correctAnswer: "d"
+      correctAnswer: "a"
     }
   ];
 

@@ -1,7 +1,7 @@
 (function() {
   const myQuestions = [
     {
-      question: "Who is the strongest?",
+      question: "noogie?",
       answers: {
         a: "Superman",
         b: "The Terminator",

@@ -10,7 +10,7 @@
       correctAnswer: "b"
     },
     {
-      question: "怎么说人?",
+      question: "什么说人?",
       answers: {
         a: "book",
         b: "dog",
@@ -19,11 +19,11 @@
       correctAnswer: "c"
     },
     {
-      question: "?",
+      question: "which of these means play?",
       answers: {
-        a: "",
-        b: "",
-        c: ""
+        a: "玩",
+        b: "坐",
+        c: "大"
       },
       correctAnswer: "a"
     }

@@ -11,7 +11,12 @@
     <canvas id="myCanvas" width="1480" height="640" style="border:1px solid #d3d3d3;">
       Your browser is too old.</canvas>
     <script>
-     
+         
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+     ctx.fillStyle="#000000";
+ctx.fillRect(0,0,10000,10000);
+      
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
      ctx.fillStyle="#34495E";

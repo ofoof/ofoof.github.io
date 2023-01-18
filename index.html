@@ -1,434 +1,87 @@
-<!doctype html>
- <html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-   <title>FOOF CITY</title>
-   <link rel="stylesheet" href="main.css">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | LD52!</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
   </head>
-   <body>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-mobile-warning">
+        WebGL builds are not supported on mobile devices.
+      </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">LD52!</div>
+      </div>
+    </div>
     <script>
-     document.write("<h1>-- Welcome to foof city! -- </h1>");</script>
-  
-    <canvas id="myCanvas" width="1500" height="640" style="border:1px solid #d3d3d3;">
-      Your Browser Is TOO Dang Old.</canvas>
-    <script>
-         
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-     ctx.fillStyle="#000000";
-ctx.fillRect(0,0,10000,10000);
-      
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-     ctx.fillStyle="#34495E";
-ctx.fillRect(80,250,80,800);
-        
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";
-ctx.fillRect(90,265,60,60);
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/Builds.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/Builds.data.br",
+        frameworkUrl: buildUrl + "/Builds.framework.js.br",
+        codeUrl: buildUrl + "/Builds.wasm.br",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "LD52!",
+        productVersion: "1.0",
+      };
 
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(90,335,60,60);     
-    
- var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(90,405,60,60);
-     
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(90,475,60,60);
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var mobileWarning = document.querySelector("#unity-mobile-warning");
 
-     var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(90,565,25,70);
-        
-     var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(125,565,25,70);
-     
-     var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#34495E";   
-ctx.fillRect(180,200,80,800);
-     
- var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(190,210,60,60);
-  
-  var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(190,280,60,60);  
-     
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(190,350,60,60);
-    
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(190,420,60,60);
-     
- var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(190,490,60,60);
-     
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(190,565,25,70);     
-             
- var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(225,565,25,70);    
-   
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#34495E";   
-ctx.fillRect(300,280,80,370);       
-     
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(310,290,60,60);       
-     
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(310,360,60,60);       
-     
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(310,430,60,60);       
-     
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(310,430,60,60);       
-           
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(310,500,60,60);           
-            
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(310,565,25,70);           
-           
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(345,565,25,70);           
-         
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffffff";   
-ctx.fillRect(430,100,80,999);           
-                  
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ff0000";   
-ctx.fillRect(440,110,60,60);                      
-                           
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#f07c16";   
-ctx.fillRect(440,180,60,60);                      
-                                        
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(440,250,60,60);                      
-                                        
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#00ff00";   
-ctx.fillRect(440,320,60,60);                      
-                                   
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#0000ff";   
-ctx.fillRect(440,390,60,60);                      
-                                              
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ff00ff";   
-ctx.fillRect(440,460,60,60);                      
-                                                       
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ff0000";   
-ctx.fillRect(440,540,30,30);                      
-                                                                     
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#f07c16";   
-ctx.fillRect(470,540,30,30);                      
-                                                       
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffff00";   
-ctx.fillRect(440,570,30,30);                      
-                                                              
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ff00ff";   
-ctx.fillRect(470,570,30,30);                      
-                                                                                
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#00ff00";   
-ctx.fillRect(440,600,30,30);                      
-                                                                                         
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#0000ff";   
-ctx.fillRect(470,600,30,30);                      
-                                                                                                      
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(800,260,105,10);                      
-                                                                                                         
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(775,270,15,10);                      
-                                                                                                         
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(915,270,15,10);                      
-                                                                                                          
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(935,290,15,10);                      
-                                                                                                         
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(755,290,15,10);                      
-                                                                                                          
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(740,310,15,10);                      
-                                                                                                           
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(950,310,15,10);                      
-                                                                                                           
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#4a4a4a";   
-ctx.fillRect(815,230,75,900);                      
-                                                                                                           
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#6c7273";   
-ctx.fillRect(777.5,170,150,60);                      
-                                                                                                            
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000";   
-ctx.fillRect(782.5,175,10,50);                      
-                                                                                                             
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000";   
-ctx.fillRect(782.5,175,30,10);                      
-                                                                                                             
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000";   
-ctx.fillRect(782.5,195,30,10);                                            
-                                                                                                              
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000";   
-ctx.fillRect(822.5,175,25,10);                                            
-                                                                                                              
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000";   
-ctx.fillRect(822.5,175,10,50);                                            
-                                                                                                              
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000";   
-ctx.fillRect(837.5,175,10,50);                                            
-                                                                                                              
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000";   
-ctx.fillRect(822.5,215,25,10);                                            
-                                                                                                              
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000";   
-ctx.fillRect(857.5,175,25,10);                                            
-                                                                                                              
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000";   
-ctx.fillRect(857.5,175,10,50);                                            
-                                                                                                              
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000";   
-ctx.fillRect(872.5,175,10,50);                                            
-                                                                                                              
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000";   
-ctx.fillRect(857.5,215,25,10);                                            
-                                                                                                            
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000";   
-ctx.fillRect(892.5,175,10,50);                      
-                                                                                                             
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000";   
-ctx.fillRect(892.5,175,30,10);                      
-                                                                                                             
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000";   
-ctx.fillRect(892.5,195,30,10);                                            
-                                                                                                                       
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(755,290,15,10);                      
-                                                                                                       
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#6c7273";   
-ctx.fillRect(600,580,500,100);                      
-                                                                                                                
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#6c7273";   
-ctx.fillRect(725,325,250,25);                     
-                              
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#606060";   
-ctx.fillRect(775,350,150,25);                      
-                                                                                                        
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#6c7273";   
-ctx.fillRect(675,425,350,30);                      
-                             
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#606060";   
-ctx.fillRect(700,455,300,25);                      
-                                                                               
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(715,325,10,40);                      
-                                                                                          
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(705,355,10,40);                      
-                                                                                             
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(695,385,10,40);                      
-                                                                                
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(975,325,10,40);                      
-                                                                                       
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(985,355,10,40);                      
-                                                                                             
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(995,385,10,40);                      
- 
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(660,425,15,60);
- 
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(645,465,15,60);
-  
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(630,505,15,75);
-    
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(1055,505,15,75);
-  
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(1025,425,15,60);
- 
-var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#2040ff";   
-ctx.fillRect(1040,465,15,60);
+      // By default Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        container.className = "unity-mobile";
+        // Avoid draining fillrate performance on mobile devices,
+        // and default/override low DPI mode on mobile browsers.
+        config.devicePixelRatio = 1;
+        mobileWarning.style.display = "block";
+        setTimeout(() => {
+          mobileWarning.style.display = "none";
+        }, 5000);
+      } else {
+        canvas.style.width = "1057px";
+        canvas.style.height = "600px";
+      }
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
     </script>
-  
-<script>
- function hi(){
- var answer = prompt("You Like? (yes/no)");
- if(answer == 'yes'){alert("YAY!");}
-  else if (answer == 'no'){alert("BooHoo!");}
-  else if (answer == 'FOOF!'){alert("YOU FOUND A SECRET!"); 
- var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#000000";   
-ctx.fillRect(0,0,9999999,99999999);
-
-  var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffffff";   
-ctx.fillRect(20,20,200,30);  
-                              
-
- var c = document.getElementById("myCanvas"); 
-    var ctx = c.getContext("2d");
-     ctx.fillStyle="#ffffff";   
-ctx.fillRect(20,20,30,300);                                
- }
-  else {alert('ok');}}
-    </script>
-    <script>
-     setTimeout(hi,5001);
-      </script>
-   </body> 
-  </html> 
+  </body>
+</html>
